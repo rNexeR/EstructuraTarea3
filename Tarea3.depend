@@ -15,3 +15,19 @@
 	<set>
 	<map>
 
+1414199427 source:/home/turupawn/Projects/Codeblocks/Clases/Estructura/Tarea3/Evaluador.cpp
+	"Evaluador.h"
+
+1414197581 /home/turupawn/Projects/Codeblocks/Clases/Estructura/Tarea3/Evaluador.h
+	<iostream>
+	<vector>
+	<set>
+	<map>
+
+1414199195 source:/home/turupawn/Projects/Codeblocks/Clases/Estructura/Tarea3/main.cpp
+	"Evaluador.h"
+	<iostream>
+	<vector>
+	<set>
+	<map>
+

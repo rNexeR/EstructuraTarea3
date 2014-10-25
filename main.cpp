@@ -11,39 +11,39 @@ void agregarASet(set<int> *mi_set,int valor)
 {
 }
 
-//agrega 'valor' a 'mi_map' usando la 'llave' como llave
-void agregarMap(map<string, int> *mi_map, string llave, int valor)
+//devuelve true si valor (dado) existe en mi_set (dado)
+bool existe(set<int> mi_set,int valor)
 {
+    return false;
 }
 
-//devuelve cuantos elementos de 'mi_multiset' tienen un valor de 'valor'
-int contarElementosMultiset(multiset<int> mi_multiset,int valor)
+//devuelve la cantidad de elementos de mi_set (dado)
+int tamano(set<int> mi_set)
 {
     return -1;
 }
 
-//devuelve cuantos elementos de 'mi_multimap' usan 'llave' como llave
-int contarElementosMultimap(multimap<string,int> mi_multimap,string llave)
+//devuelve la interseccion de mi_set1 (dado) y mi_set2 (dado)
+//(devuelve un set que contenga unicamente los valores que mi_set1 y mi_set2 tengan en comun)
+set<int> getInserseccion(set<int> mi_set1, set<int> mi_set2)
 {
-    return -1;
+    set<int> mi_set3;
+    return mi_set3;
 }
 
-//devuelve la suma de los elementos de 'mi_multiset' que usan 'llave' como llave
-int sumaElementosMultiset(multiset<int> mi_multiset, int valor)
+//devuelve la union de mi_set1 (dado) y mi_set2 (dado)
+//(devuelve un set que contenga todos los valores de mi_set1 y mi_set2)
+set<int> getUnion(set<int> mi_set1, set<int> mi_set2)
 {
-    return -1;
+    set<int> mi_set3;
+    return mi_set3;
 }
 
-//devuelve la suma de los elementos de 'mi_multimap' que usan 'llave' como llave
-int sumaElementosMultimap(multimap<string, int> mi_multimap, string llave)
+//devuelve true si mi_sub_set (dado) es un subconjunto de mi_set (dado)
+//(mi_set contiene todos los valres de mi_sub_set)
+bool esSubConjunto(set<int> mi_set, set<int> mi_sub_set)
 {
-    return -1;
-}
-
-//el promedio de todos los elementos que tiene 'mi_multiset' (incluyendo valores repetidos)
-int promedioElementosMultiset(multiset<int>mi_multiset)
-{
-    -1;
+    return false;
 }
 
 int main ()
