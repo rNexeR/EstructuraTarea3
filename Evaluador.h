@@ -10,9 +10,9 @@ using namespace std;
 
 void evaluar();
 
-void agregarASet(set<int> *mi_set,int valor);
-bool existe(set<int> mi_set,int valor);
-int tamano(set<int> mi_set);
+void asignarValor(map<string,int> *mi_mapa, string llave,int valor);
+char obtenerValor(map<int,char> mi_mapa,int llave);
+map<string,int> obtenerSemana();
 set<int> getInserseccion(set<int> mi_set1, set<int> mi_set2);
 set<int> getUnion(set<int> mi_set1, set<int> mi_set2);
 bool esSubConjunto(set<int> mi_set, set<int> mi_sub_set);

@@ -31,3 +31,19 @@
 	<set>
 	<map>
 
+1422485535 source:/home/turupawn/Projects/Clases/Estructura/Tarea3/Evaluador.cpp
+	"Evaluador.h"
+
+1422485427 /home/turupawn/Projects/Clases/Estructura/Tarea3/Evaluador.h
+	<iostream>
+	<vector>
+	<set>
+	<map>
+
+1422485526 source:/home/turupawn/Projects/Clases/Estructura/Tarea3/main.cpp
+	"Evaluador.h"
+	<iostream>
+	<vector>
+	<set>
+	<map>
+

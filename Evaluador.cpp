@@ -4,14 +4,15 @@ void evaluar()
 {
     int nota = 0;
 
-    cout<<"Ejercicio agregarASet:\t\t\t";
-    set<int>s;
-    agregarASet(&s,2);
-    agregarASet(&s,5);
+    cout<<"Ejercicio asignarValor:\t\t\t";
+    map<string,int>m;
+    asignarValor(&m,"A",1);
+    asignarValor(&m,"B",2);
+    asignarValor(&m,"C",3);
 
-    set<int>s2;
+    //set<int>s2;
 
-    if( (*s.find(2)) == 2 && (*s.find(5)) == 5)
+    if( m["A"]==1 && m["B"]==2 && m["C"]==3)
     {
         nota++;
         cout<<"Correcto"<<endl;
@@ -35,9 +36,20 @@ void evaluar()
     sb.insert(5);
     sb.insert(6);
 
-    cout<<"Ejercicio existe:\t\t\t";
+    cout<<"Ejercicio obtenerValor:\t\t\t";
 
-    if(existe(sa,2) && !existe(sa,1) && existe(sb,1) && existe(sa,6) && !existe(sb,7))
+    map<int,char> m2;
+    m2[10] = 'x';
+    m2[20] = 'y';
+    m2[30] = 'z';
+
+    map<int,char> m3;
+    m3[10] = 'a';
+
+    if(obtenerValor(m2,10) == 'x'
+    && obtenerValor(m2,20) == 'y'
+    && obtenerValor(m2,30) == 'z'
+    && obtenerValor(m3,10) == 'a')
     {
         nota++;
         cout<<"Correcto"<<endl;
@@ -46,9 +58,15 @@ void evaluar()
         cout<<"Incorrecto"<<endl;
     }
 
-    cout<<"Ejercicio tamano:\t\t\t";
+    cout<<"Ejercicio obtenerSemana:\t\t";
 
-    if(tamano(sa)==5 && tamano(sb)==6)
+    if(obtenerSemana()["lunes"]==1
+    && obtenerSemana()["martes"]==2
+    && obtenerSemana()["miercoles"]==3
+    && obtenerSemana()["jueves"]==4
+    && obtenerSemana()["viernes"]==5
+    && obtenerSemana()["sabado"]==6
+    && obtenerSemana()["domingo"]==7)
     {
         nota++;
         cout<<"Correcto"<<endl;

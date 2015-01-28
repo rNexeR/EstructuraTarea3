@@ -6,21 +6,32 @@
 using namespace std;
 
 
-//agrega el elemento valor (dado) a mi_set (dado)
-void agregarASet(set<int> *mi_set,int valor)
+//Agrega valor (dado) a mi_mapa (dado), en la llave dada
+//Nota: mi_mapa es un apuntador, para usarlo se sugiere desrreferenciarlo con el operador *
+void asignarValor(map<string,int> *mi_mapa, string llave,int valor)
 {
 }
 
-//devuelve true si valor (dado) existe en mi_set (dado)
-bool existe(set<int> mi_set,int valor)
+//Devuelve el valor asociado a la llave (dada) en mi_mapa (dado)
+char obtenerValor(map<int,char> mi_mapa,int llave)
 {
-    return false;
+    return ' ';
 }
 
-//devuelve la cantidad de elementos de mi_set (dado)
-int tamano(set<int> mi_set)
+//Devolver el un mapa con los siguientes valores dados en la tabla
+//  LLave     |   Valor
+//----------------------------
+//  1         |   "lunes"
+//  2         |   "martes"
+//  3         |   "miercoles"
+//  4         |   "jueves"
+//  5         |   "viernes"
+//  6         |   "sabado"
+//  7         |   "domingo"
+map<string,int> obtenerSemana()
 {
-    return -1;
+    map<string,int> semana;
+    return semana;
 }
 
 //devuelve la interseccion de mi_set1 (dado) y mi_set2 (dado)
