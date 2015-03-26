@@ -10,12 +10,13 @@ using namespace std;
 //Nota: mi_mapa es un apuntador, para usarlo se sugiere desrreferenciarlo con el operador *
 void asignarValor(map<string,int> *mi_mapa, string llave,int valor)
 {
+    (*mi_mapa)[llave] = valor;
 }
 
 //Devuelve el valor asociado a la llave (dada) en mi_mapa (dado)
 char obtenerValor(map<int,char> mi_mapa,int llave)
 {
-    return ' ';
+    return (mi_mapa)[llave];
 }
 
 //Devolver el un mapa con los siguientes valores dados en la tabla
@@ -31,6 +32,13 @@ char obtenerValor(map<int,char> mi_mapa,int llave)
 map<string,int> obtenerSemana()
 {
     map<string,int> semana;
+    semana["lunes"] = 1;
+    semana["martes"] = 2;
+    semana["miercoles"] = 3;
+    semana["jueves"] = 4;
+    semana["viernes"] = 5;
+    semana["sabado"] = 6;
+    semana["domingo"] = 7;
     return semana;
 }
 
@@ -39,6 +47,12 @@ map<string,int> obtenerSemana()
 set<int> getInserseccion(set<int> mi_set1, set<int> mi_set2)
 {
     set<int> mi_set3;
+    for(set<int>::iterator i = mi_set1.begin(); i!=mi_set1.end(); i++){
+        for(set<int>::iterator j = mi_set2.begin(); j!=mi_set2.end(); j++){
+            if((*i)==(*j))
+                mi_set3.insert((*i));
+        }
+    }
     return mi_set3;
 }
 
@@ -47,6 +61,12 @@ set<int> getInserseccion(set<int> mi_set1, set<int> mi_set2)
 set<int> getUnion(set<int> mi_set1, set<int> mi_set2)
 {
     set<int> mi_set3;
+    for(set<int>::iterator i = mi_set1.begin(); i!=mi_set1.end(); i++){
+        mi_set3.insert((*i));
+    }
+    for(set<int>::iterator i = mi_set2.begin(); i!=mi_set2.end(); i++){
+        mi_set3.insert((*i));
+    }
     return mi_set3;
 }
 
@@ -54,7 +74,19 @@ set<int> getUnion(set<int> mi_set1, set<int> mi_set2)
 //(mi_set contiene todos los valores de mi_sub_set)
 bool esSubConjunto(set<int> mi_set, set<int> mi_sub_set)
 {
-    return false;
+    for(set<int>::iterator i = mi_sub_set.begin(); i!=mi_sub_set.end(); i++){
+        bool esta = true;
+        for(set<int>::iterator j = mi_set.begin(); j!=mi_set.end(); j++){
+            if((*i)==(*j)){
+                esta = true;
+                break;
+            }else
+                esta = false;
+        }
+        if (!esta)
+            return false;
+    }
+    return true;
 }
 
 int main ()
